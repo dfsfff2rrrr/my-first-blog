@@ -1,0 +1,41 @@
+#name = input("Ваше имя")
+#print("Привет", name )
+#age = input("Дмитрий сколько вам лет ?")
+#print("Ваш возраст", age)
+'''
+number = input ("введите первое число")
+print("ваше число", number)
+number2 = input ("введите второе число")
+print("ваше число", number2)
+start = input("сумма этих чисел")
+print(start)
+start2 = input (int(number) + int(number2))
+print("сложение", start2)
+start2 = input (int(number) - int(number2))
+print("вычитание",start2)
+start2 = input (int(number) * int(number2))
+print("умножение",start2)
+
+number = input ("введите первое число")
+print("ваше число", number)
+number2 = input ("введите второе число")
+print("ваше число", number2)
+start = input("сумма этих чисел")
+print(start)
+start2 = input (float(number) + float(number2))
+print("сложение", start2)
+'''
+Text = input ("введите сумму:")
+print ("Начальная сумма вклада:",Text)
+Text2 = input ("Введите процент по вкладу:")
+print("Процент по вкладу:", Text2)
+Text3 = input ("Кол-во лет:")
+print("Количество лет:",Text3)
+Number = input ("Нажмите ENTER для рассчета")
+print(Number)
+Number2 = (int(Text)*int(Text2)*int(Text3)/100)
+print ("начисленные проценты",Number2)
+
+
+
+
