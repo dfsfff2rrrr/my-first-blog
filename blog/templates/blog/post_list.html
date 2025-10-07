@@ -5,14 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Сборка игровых ПК</title>
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #0f0f0f;
       color: #f5f5f5;
+      height: 100%;
+      overflow-x: hidden;
     }
+
+    /* Контейнер для анимации фона */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: #0f0f0f;
+      z-index: -1;
+    }
+
     header {
-      background-color: #1a1a1a;
+      background-color: rgba(26, 26, 26, 0.85);
       padding: 20px;
       text-align: center;
     }
@@ -20,9 +33,10 @@
       margin: 0;
       color: #00ff99;
     }
+
     nav {
       text-align: center;
-      background-color: #111;
+      background-color: rgba(17, 17, 17, 0.9);
       padding: 10px;
     }
     nav a {
@@ -33,30 +47,42 @@
     nav a:hover {
       text-decoration: underline;
     }
+
     .content {
       padding: 30px;
+      position: relative;
+      z-index: 1;
     }
+
     .section {
       margin-bottom: 40px;
     }
+
     .gallery {
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
       justify-content: center;
     }
+
     .gallery-item {
       background-color: #1f1f1f;
       padding: 15px;
       border-radius: 8px;
       width: 200px;
       text-align: center;
+      transition: transform 0.3s ease;
     }
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+
     .gallery-item img {
       width: 100%;
       height: auto;
       border-radius: 5px;
     }
+
     form {
       max-width: 500px;
       margin: 0 auto;
@@ -64,6 +90,7 @@
       padding: 20px;
       border-radius: 8px;
     }
+
     input, textarea {
       width: 100%;
       margin-bottom: 10px;
@@ -73,6 +100,7 @@
       background-color: #333;
       color: white;
     }
+
     button {
       background-color: #00ff99;
       color: black;
@@ -81,10 +109,11 @@
       border-radius: 5px;
       cursor: pointer;
     }
+
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #111;
+      background-color: rgba(17, 17, 17, 0.95);
       margin-top: 40px;
       color: #777;
     }
@@ -92,59 +121,97 @@
 </head>
 <body>
 
-  <header>
-    <h1>Сборка Игровых ПК</h1>
-    <p>Лучшие конфигурации для геймеров</p>
-  </header>
+<!-- Анимированный фон -->
+<div id="particles-js"></div>
 
-  <nav>
-    <a href="#about">О нас</a>
-    <a href="#gallery">Галерея</a>
-    <a href="#contact">Контакты</a>
-  </nav>
+<header>
+  <h1>Сборка Игровых ПК</h1>
+  <p>Лучшие конфигурации для геймеров</p>
+</header>
 
-  <div class="content">
-    <section class="section" id="about">
-      <h2>Почему выбрать нас?</h2>
-      <p>Мы собираем игровые ПК под ключ — с оптимальным соотношением цены и производительности. Наши специалисты подбирают комплектующие под ваши задачи и бюджет.</p>
-    </section>
+<nav>
+  <a href="#about">О нас</a>
+  <a href="#gallery">Галерея</a>
+  <a href="#contact">Контакты</a>
+</nav>
 
-    <section class="section" id="gallery">
-      <h2>Комплектующие</h2>
-      <div class="gallery">
-        <div class="gallery-item">
-          <img src="C:\22_Зубань Дмитрий\123\видюха.jpg" alt="Видеокарта">
-          <p>GeForce RTX 4070</p>
-        </div>
-        <div class="gallery-item">
-          <img src="https://via.placeholder.com/200x150?text=CPU" alt="Процессор">
-          <p>Intel Core i7 13700K</p>
-        </div>
-        <div class="gallery-item">
-          <img src="https://via.placeholder.com/200x150?text=RAM" alt="Оперативная память">
-          <p>32GB DDR5</p>
-        </div>
-        <div class="gallery-item">
-          <img src="https://via.placeholder.com/200x150?text=SSD" alt="SSD">
-          <p>1TB NVMe SSD</p>
-        </div>
+<div class="content">
+  <section class="section" id="about">
+    <h2>Почему выбрать нас?</h2>
+    <p>Мы собираем игровые ПК под ключ — с оптимальным соотношением цены и производительности. Наши специалисты подбирают комплектующие под ваши задачи и бюджет.</p>
+  </section>
+
+  <section class="section" id="gallery">
+    <h2>Комплектующие</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="https://cdn.mos.cms.futurecdn.net/TsM7P8QF2vqkF6ytCN9FzG.jpg" alt="Видеокарта">
+        <p>GeForce RTX 4070</p>
       </div>
-    </section>
+      <div class="gallery-item">
+        <img src="https://cdn.mos.cms.futurecdn.net/k9yXogbn8V4ih3R6TfCuEd.jpg" alt="Процессор">
+        <p>Intel Core i7 13700K</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://m.media-amazon.com/images/I/61bNNc6rBHL._AC_SL1500_.jpg" alt="Оперативная память">
+        <p>32GB DDR5</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://m.media-amazon.com/images/I/61C1ZtFqPOL._AC_SL1500_.jpg" alt="SSD">
+        <p>1TB NVMe SSD</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="section" id="contact">
-      <h2>Оставьте заявку</h2>
-      <form>
-        <input type="text" placeholder="Ваше имя" required>
-        <input type="email" placeholder="Email" required>
-        <textarea rows="4" placeholder="Какая сборка вас интересует?"></textarea>
-        <button type="submit">Отправить</button>
-      </form>
-    </section>
-  </div>
+  <section class="section" id="contact">
+    <h2>Оставьте заявку</h2>
+    <form>
+      <input type="text" placeholder="Ваше имя" required>
+      <input type="email" placeholder="Email" required>
+      <textarea rows="4" placeholder="Какая сборка вас интересует?"></textarea>
+      <button type="submit">Отправить</button>
+    </form>
+  </section>
+</div>
 
-  <footer>
-    © 2025 Сборка Игровых ПК. Все права защищены.
-  </footer>
+<footer>
+  © 2025 Сборка Игровых ПК. Все права защищены.
+</footer>
+
+<!-- Скрипт анимированного фона -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 80
+      },
+      "color": {
+        "value": "#00ff99"
+      },
+      "shape": {
+        "type": "circle"
+      },
+      "opacity": {
+        "value": 0.5
+      },
+      "size": {
+        "value": 3
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#00ff99",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 2
+      }
+    }
+  });
+</script>
 
 </body>
 </html>
